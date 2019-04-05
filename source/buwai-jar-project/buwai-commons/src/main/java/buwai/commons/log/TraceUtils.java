@@ -5,12 +5,12 @@ import org.slf4j.MDC;
 import java.util.UUID;
 
 /**
- * 跟踪日志
+ * 存放和取出日志跟踪信息
  *
  * @author 不歪
  * @version 创建时间：2019-03-26 16:56
  */
-public class TraceLog {
+public class TraceUtils {
 
     public static final String KEY_TRACE_ID = "TRACE_ID";
     public static final String KEY_THREAD_ID = "THREAD_ID";

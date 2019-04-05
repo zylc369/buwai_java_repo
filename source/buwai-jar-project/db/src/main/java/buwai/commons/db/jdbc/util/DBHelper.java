@@ -12,7 +12,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * 数据库帮助类
+ * 数据库操作帮助类
  *
  * @author 不歪
  * @version 创建时间：2019-04-05 10:43

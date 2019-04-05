@@ -1,6 +1,6 @@
 package buwai.commons.thread;
 
-import buwai.commons.log.TraceLog;
+import buwai.commons.log.TraceUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 
@@ -50,13 +50,13 @@ public class MDCThreadPoolTaskExecutor extends ThreadPoolExecutor {
             MDC.setContextMap(context);
         }
         try {
-            TraceLog.putThreadId();
+            TraceUtils.putThreadId();
             // 执行异步操作
             runnable.run();
         } finally {
             try {
                 if (isSet) {
-                    TraceLog.clear();
+                    TraceUtils.clear();
                 }
             } catch (Exception e) {
                 log.warn("mdc clear exception.", e);
